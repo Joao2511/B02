@@ -13,7 +13,7 @@ class Produto {
         this.codigo = codigo.toUpperCase();
         this.nome = nome.toUpperCase();
         this.preco = preco;
-        this.ativo = true; // Valor padrão
+        this.ativo = true;
     }
 
     @Override
@@ -51,7 +51,7 @@ class Cliente {
         this.telefone = telefone;
         this.email = email;
         this.nascimento = nascimento;
-        this.ativo = true; // O cliente começa como ativo
+        this.ativo = true;
     }
 
     @Override
@@ -63,10 +63,10 @@ class Cliente {
 }
 
 public class Lanchonete {
-    static Produto[] produtos = new Produto[100]; // Vetor para armazenar até 100 produtos
-    static int countProdutos = 0; // Contador de produtos cadastrados
-    static Cliente[] clientes = new Cliente[100]; // Vetor para armazenar até 100 clientes
-    static int countClientes = 0; // Contador de clientes cadastrados
+    static Produto[] produtos = new Produto[100];
+    static int countProdutos = 0;
+    static Cliente[] clientes = new Cliente[100];
+    static int countClientes = 0;
     static Scanner scanner = new Scanner(System.in);
     static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -79,7 +79,7 @@ public class Lanchonete {
             System.out.println("4. Exibir Clientes");
             System.out.println("5. Sair");
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -103,7 +103,6 @@ public class Lanchonete {
         } while (opcao != 5);
     }
 
-    // Funções de cadastro de produtos
     public static void menuCadastroProdutos() {
         int opcao;
         do {
@@ -113,7 +112,7 @@ public class Lanchonete {
             System.out.println("4. Consultar Produto");
             System.out.println("5. Voltar ao Menu Principal");
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -237,7 +236,7 @@ public class Lanchonete {
         System.out.println("-------------------------------------------------------------------------------------------------");
     }
 
-    // Funções de cadastro de clientes
+    
     public static void menuCadastroClientes() {
         int opcao;
         do {
@@ -247,7 +246,7 @@ public class Lanchonete {
             System.out.println("4. Consultar Cliente");
             System.out.println("5. Voltar ao Menu Principal");
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
