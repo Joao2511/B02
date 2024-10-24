@@ -63,7 +63,7 @@ class Cliente {
     }
 }
 
-public class LanchoneteGUI {
+public class LanchoneteV3 {
     static Produto[] produtos = new Produto[100];
     static int countProdutos = 0;
     static Cliente[] clientes = new Cliente[100];
@@ -78,42 +78,39 @@ public class LanchoneteGUI {
         JFrame frame = new JFrame("Sistema de Lanchonete");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximiza a janela
-        frame.setBackground(new Color(255, 255, 255)); // Cor de fundo da janela
+        frame.setBackground(new Color(255, 255, 255));
 
-        // Definindo uma nova fonte para os botões
         Font buttonFont = new Font("Arial", Font.BOLD, 16);
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(3, 2));
-        panel.setBackground(new Color(240, 240, 240)); // Cor de fundo do painel
+        panel.setBackground(new Color(240, 240, 240));
 
-        // Criando botões com cores e fonte personalizadas
         JButton btnCadastroProdutos = new JButton("Cadastro de Produtos");
-        btnCadastroProdutos.setBackground(new Color(76, 175, 80)); // Verde
+        btnCadastroProdutos.setBackground(new Color(76, 175, 80));
         btnCadastroProdutos.setForeground(Color.WHITE);
         btnCadastroProdutos.setFont(buttonFont);
 
         JButton btnExibirCardapio = new JButton("Exibir Cardápio");
-        btnExibirCardapio.setBackground(new Color(33, 150, 243)); // Azul
+        btnExibirCardapio.setBackground(new Color(33, 150, 243));
         btnExibirCardapio.setForeground(Color.WHITE);
         btnExibirCardapio.setFont(buttonFont);
 
         JButton btnCadastroClientes = new JButton("Cadastro de Clientes");
-        btnCadastroClientes.setBackground(new Color(255, 193, 7)); // Amarelo
+        btnCadastroClientes.setBackground(new Color(255, 193, 7)); 
         btnCadastroClientes.setForeground(Color.BLACK);
         btnCadastroClientes.setFont(buttonFont);
 
         JButton btnExibirClientes = new JButton("Exibir Clientes");
-        btnExibirClientes.setBackground(new Color(255, 87, 34)); // Laranja
+        btnExibirClientes.setBackground(new Color(255, 87, 34));
         btnExibirClientes.setForeground(Color.WHITE);
         btnExibirClientes.setFont(buttonFont);
 
         JButton btnSair = new JButton("Sair");
-        btnSair.setBackground(new Color(244, 67, 54)); // Vermelho
+        btnSair.setBackground(new Color(244, 67, 54));
         btnSair.setForeground(Color.WHITE);
         btnSair.setFont(buttonFont);
 
-        // Adicionando os botões ao painel
         panel.add(btnCadastroProdutos);
         panel.add(btnExibirCardapio);
         panel.add(btnCadastroClientes);
@@ -134,11 +131,10 @@ public class LanchoneteGUI {
 
     public static void menuCadastroProdutos() {
         JFrame frame = new JFrame("Cadastro de Produtos");
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximiza a janela
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         JPanel panel = new JPanel(new GridLayout(5, 2));
-        panel.setBackground(new Color(240, 240, 240)); // Cor de fundo do painel
+        panel.setBackground(new Color(240, 240, 240));
 
-        // Definindo uma nova fonte para os rótulos e botões
         Font labelFont = new Font("Arial", Font.PLAIN, 14);
         Font buttonFont = new Font("Arial", Font.BOLD, 16);
 
@@ -155,22 +151,22 @@ public class LanchoneteGUI {
         JTextField txtPreco = new JTextField();
 
         JButton btnIncluir = new JButton("Incluir");
-        btnIncluir.setBackground(new Color(76, 175, 80)); // Verde
+        btnIncluir.setBackground(new Color(76, 175, 80));
         btnIncluir.setForeground(Color.WHITE);
         btnIncluir.setFont(buttonFont);
 
         JButton btnAlterar = new JButton("Alterar");
-        btnAlterar.setBackground(new Color(33, 150, 243)); // Azul
+        btnAlterar.setBackground(new Color(33, 150, 243));
         btnAlterar.setForeground(Color.WHITE);
         btnAlterar.setFont(buttonFont);
 
         JButton btnExcluir = new JButton("Excluir");
-        btnExcluir.setBackground(new Color(255, 87, 34)); // Laranja
+        btnExcluir.setBackground(new Color(255, 87, 34));
         btnExcluir.setForeground(Color.WHITE);
         btnExcluir.setFont(buttonFont);
 
         JButton btnVoltar = new JButton("Voltar");
-        btnVoltar.setBackground(new Color(244, 67, 54)); // Vermelho
+        btnVoltar.setBackground(new Color(244, 67, 54));
         btnVoltar.setForeground(Color.WHITE);
         btnVoltar.setFont(buttonFont);
 
@@ -263,9 +259,9 @@ public class LanchoneteGUI {
 
     public static void menuCadastroClientes() {
         JFrame frame = new JFrame("Cadastro de Clientes");
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximiza a janela
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         JPanel panel = new JPanel(new GridLayout(24, 1));
-        panel.setBackground(new Color(240, 240, 240)); // Cor de fundo do painel
+        panel.setBackground(new Color(240, 240, 240));
 
         // Definindo uma nova fonte para os rótulos e botões
         Font labelFont = new Font("Arial", Font.PLAIN, 14);
@@ -320,22 +316,22 @@ public class LanchoneteGUI {
         JTextField txtNascimento = new JTextField();
 
         JButton btnIncluir = new JButton("Incluir");
-        btnIncluir.setBackground(new Color(76, 175, 80)); // Verde
+        btnIncluir.setBackground(new Color(76, 175, 80));
         btnIncluir.setForeground(Color.WHITE);
         btnIncluir.setFont(buttonFont);
 
         JButton btnAlterar = new JButton("Alterar");
-        btnAlterar.setBackground(new Color(33, 150, 243)); // Azul
+        btnAlterar.setBackground(new Color(33, 150, 243));
         btnAlterar.setForeground(Color.WHITE);
         btnAlterar.setFont(buttonFont);
 
         JButton btnExcluir = new JButton("Excluir");
-        btnExcluir.setBackground(new Color(255, 87, 34)); // Laranja
+        btnExcluir.setBackground(new Color(255, 87, 34));
         btnExcluir.setForeground(Color.WHITE);
         btnExcluir.setFont(buttonFont);
 
         JButton btnVoltar = new JButton("Voltar");
-        btnVoltar.setBackground(new Color(244, 67, 54)); // Vermelho
+        btnVoltar.setBackground(new Color(244, 67, 54));
         btnVoltar.setForeground(Color.WHITE);
         btnVoltar.setFont(buttonFont);
 
