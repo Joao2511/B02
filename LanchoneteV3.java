@@ -141,11 +141,11 @@ public class LanchoneteV3 {
         JLabel lblCodigo = new JLabel("Código:");
         lblCodigo.setFont(labelFont);
         JTextField txtCodigo = new JTextField();
-
+        
         JLabel lblNome = new JLabel("Nome:");
         lblNome.setFont(labelFont);
         JTextField txtNome = new JTextField();
-
+        
         JLabel lblPreco = new JLabel("Preço:");
         lblPreco.setFont(labelFont);
         JTextField txtPreco = new JTextField();
@@ -270,47 +270,47 @@ public class LanchoneteV3 {
         JLabel lblNome = new JLabel("Nome:");
         lblNome.setFont(labelFont);
         JTextField txtNome = new JTextField();
-
+        
         JLabel lblLogradouro = new JLabel("Logradouro:");
         lblLogradouro.setFont(labelFont);
         JTextField txtLogradouro = new JTextField();
-
+        
         JLabel lblNumero = new JLabel("Número:");
         lblNumero.setFont(labelFont);
         JTextField txtNumero = new JTextField();
-
+        
         JLabel lblComplemento = new JLabel("Complemento:");
         lblComplemento.setFont(labelFont);
         JTextField txtComplemento = new JTextField();
-
+        
         JLabel lblBairro = new JLabel("Bairro:");
         lblBairro.setFont(labelFont);
         JTextField txtBairro = new JTextField();
-
+        
         JLabel lblCidade = new JLabel("Cidade:");
         lblCidade.setFont(labelFont);
         JTextField txtCidade = new JTextField();
-
+        
         JLabel lblCep = new JLabel("CEP:");
         lblCep.setFont(labelFont);
         JTextField txtCep = new JTextField();
-
+        
         JLabel lblEstado = new JLabel("Estado:");
         lblEstado.setFont(labelFont);
         JTextField txtEstado = new JTextField();
-
+        
         JLabel lblSexo = new JLabel("Sexo:");
         lblSexo.setFont(labelFont);
         JTextField txtSexo = new JTextField();
-
+        
         JLabel lblTelefone = new JLabel("Telefone:");
         lblTelefone.setFont(labelFont);
         JTextField txtTelefone = new JTextField();
-
+        
         JLabel lblEmail = new JLabel("Email:");
         lblEmail.setFont(labelFont);
         JTextField txtEmail = new JTextField();
-
+        
         JLabel lblNascimento = new JLabel("Nascimento (dd/MM/yyyy):");
         lblNascimento.setFont(labelFont);
         JTextField txtNascimento = new JTextField();
