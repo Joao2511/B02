@@ -46,7 +46,7 @@ public class AcessoAplicativo extends JFrame {
                 String senha = new String(senhaField.getPassword());
 
                 if (usuario.equals("denys.silva") && senha.equals("Teste@2024")) {
-                    JOptionPane.showMessageDialog(null, "Acesso confirmado!");
+                    JOptionPane.showMessageDialog(null, "Acesso confirmado");
                     System.exit(0);
                 } else {
                     JOptionPane.showMessageDialog(null, "Usuário ou senha inválido!");
