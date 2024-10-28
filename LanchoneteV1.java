@@ -48,7 +48,7 @@ public class LanchoneteV1 {
                     System.out.println("Saindo...");
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opção inválida");
             }
         } while (opcao != 4);
     }
