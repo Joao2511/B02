@@ -131,7 +131,7 @@ public class LanchoneteV2 {
                     System.out.println("Voltando ao menu principal...");
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opção inválida");
             }
         } while (opcao != 5);
     }
