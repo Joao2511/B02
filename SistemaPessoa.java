@@ -1,59 +1,77 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SistemaPessoa extends JFrame {
 
     public SistemaPessoa() {
-        setTitle("Sistema de Pessoa");
-        setSize(600, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Configurações da janela principal
+        setTitle("Cadastro de Usuários");
+        setSize(700, 300);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
+        
+        // Painel principal
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(5, 2, 5, 5));
+        
+        // Campos de entrada
+        panel.add(new JLabel("Usuário:"));
+        JTextField usuarioField = new JTextField();
+        panel.add(usuarioField);
 
-        JMenuBar menuBar = new JMenuBar();
+        panel.add(new JLabel("Senha:"));
+        JPasswordField senhaField = new JPasswordField();
+        panel.add(senhaField);
 
-        JMenu menuCadastro = new JMenu("Cadastro");
-        JMenuItem itemUsuarios = new JMenuItem("Usuários");
-        JMenuItem itemPessoas = new JMenuItem("Pessoas");
-        menuCadastro.add(itemUsuarios);
-        menuCadastro.add(itemPessoas);
+        panel.add(new JLabel("Email:"));
+        JTextField emailField = new JTextField();
+        panel.add(emailField);
 
-        JMenu menuVisualizacao = new JMenu("Visualização");
-        JMenuItem itemListaUsuarios = new JMenuItem("Lista de usuário");
-        JMenuItem itemListaPessoas = new JMenuItem("Lista de Pessoas");
-        menuVisualizacao.add(itemListaUsuarios);
-        menuVisualizacao.add(itemListaPessoas);
+        panel.add(new JLabel("Ativo:"));
+        JRadioButton ativoCheckBox = new JRadioButton();
+        panel.add(ativoCheckBox);
 
-        JMenu menuSair = new JMenu("Sair");
-        menuSair.addMenuListener(new javax.swing.event.MenuListener() {
-            public void menuSelected(javax.swing.event.MenuEvent e) {
-                System.exit(0);
+        // Painel de botões
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout());
+
+        // Definição dos botões com ActionListener para mensagens
+        String[] buttonLabels = {"Incluir", "Alterar", "Excluir", "Consultar", "Cancelar", "Sair"};
+        for (String label : buttonLabels) {
+            JButton button = new JButton(label);
+            button.addActionListener(new ButtonClickListener(label));
+            buttonPanel.add(button);
+        }
+
+        // Adiciona os painéis ao frame
+        add(panel, BorderLayout.CENTER);
+        add(buttonPanel, BorderLayout.SOUTH);
+    }
+
+    private class ButtonClickListener implements ActionListener {
+        private String buttonText;
+
+        public ButtonClickListener(String buttonText) {
+            this.buttonText = buttonText;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (buttonText.equals("Sair")) {
+                dispose(); // Fecha a janela
+            } else {
+                JOptionPane.showMessageDialog(null, "Botão clicado: " + buttonText);
             }
-            public void menuDeselected(javax.swing.event.MenuEvent e) {}
-            public void menuCanceled(javax.swing.event.MenuEvent e) {}
-        });
-
-        menuBar.add(menuCadastro);
-        menuBar.add(menuVisualizacao);
-        menuBar.add(menuSair);
-
-        setJMenuBar(menuBar);
-
-        JPanel mainPanel = new JPanel();
-        mainPanel.setLayout(new BorderLayout());
-        add(mainPanel, BorderLayout.CENTER);
-
-        JPanel footerPanel = new JPanel();
-        footerPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        footerPanel.setBackground(Color.LIGHT_GRAY);
-        JLabel versionLabel = new JLabel("Versão: 12.1.2024    Usuário: denys.silva    Data de acesso: 20/09/2024 10:58");
-        footerPanel.add(versionLabel);
-        add(footerPanel, BorderLayout.SOUTH);
+        }
     }
 
     public static void main(String[] args) {
+        // Cria e exibe a janela do sistema
         SwingUtilities.invokeLater(() -> {
-            SistemaPessoa sistema = new SistemaPessoa();
-            sistema.setVisible(true);
+            SistemaPessoa frame = new SistemaPessoa();
+            frame.setVisible(true);
         });
     }
 }
