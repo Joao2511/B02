@@ -429,7 +429,7 @@ public class LanchoneteV3 {
                         clientes[i].telefone = telefone;
                         clientes[i].email = email;
                         clientes[i].nascimento = nascimento;
-                        JOptionPane.showMessageDialog(frame, "Cliente alterado com sucesso!");
+                        JOptionPane.showMessageDialog(frame, "Cliente alterado com sucesso");
                     } else {
                         JOptionPane.showMessageDialog(frame, "Cliente deve ser maior de idade.");
                     }
@@ -444,7 +444,7 @@ public class LanchoneteV3 {
             for (int i = 0; i < countClientes; i++) {
                 if (clientes[i].nome.equals(nome)) {
                     clientes[i].ativo = false;
-                    JOptionPane.showMessageDialog(frame, "Cliente excluído com sucesso!");
+                    JOptionPane.showMessageDialog(frame, "Cliente excluído com sucesso");
                     return;
                 }
             }
