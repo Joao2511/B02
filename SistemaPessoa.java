@@ -21,16 +21,12 @@ public class SistemaPessoa extends JPanel {
     private void configurarInterface() {
         setLayout(new BorderLayout());
 
-        // Menu principal
         JMenuBar menuPrincipal = criarMenuPrincipal();
 
-        // Área de trabalho
         JTextArea areaTrabalho = new JTextArea();
 
-        // Rodapé
         JPanel painelRodape = criarPainelRodape();
 
-        // Adiciona componentes
         add(menuPrincipal, BorderLayout.NORTH);
         add(areaTrabalho, BorderLayout.CENTER);
         add(painelRodape, BorderLayout.SOUTH);
@@ -39,16 +35,15 @@ public class SistemaPessoa extends JPanel {
     private JMenuBar criarMenuPrincipal() {
         JMenuBar menuPrincipal = new JMenuBar();
 
-        // Menus principais
         JMenu menuCadastro = new JMenu("Cadastro");
         JMenu menuVisualizacao = new JMenu("Visualização");
         JMenu menuSair = new JMenu("Sair");
 
-        // Eventos do menu Sair
+   
         menuSair.addMenuListener(new javax.swing.event.MenuListener() {
             @Override
             public void menuSelected(javax.swing.event.MenuEvent e) {
-                System.exit(0); // Sai do sistema
+                System.exit(0);
             }
 
             @Override
@@ -58,15 +53,12 @@ public class SistemaPessoa extends JPanel {
             public void menuCanceled(javax.swing.event.MenuEvent e) { }
         });
 
-        // Itens do menu Cadastro
         menuCadastro.add(new JMenuItem("Usuários"));
         menuCadastro.add(new JMenuItem("Pessoas"));
 
-        // Itens do menu Visualização
         menuVisualizacao.add(new JMenuItem("Lista de usuários"));
         menuVisualizacao.add(new JMenuItem("Lista de pessoas"));
 
-        // Adiciona menus à barra
         menuPrincipal.add(menuCadastro);
         menuPrincipal.add(menuVisualizacao);
         menuPrincipal.add(menuSair);
@@ -87,8 +79,8 @@ public class SistemaPessoa extends JPanel {
 
         principal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         principal.setSize(800, 800);
-        principal.setLocationRelativeTo(null); // Centraliza a janela
-        principal.add(sistemaPessoa); // Adiciona a interface ao frame principal
-        principal.setVisible(true); // Torna a janela visível
+        principal.setLocationRelativeTo(null);
+        principal.add(sistemaPessoa);
+        principal.setVisible(true);
     }
 }
