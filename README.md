@@ -8,4 +8,4 @@ AVA4-1 Publicou atrasado em 11/11 e AVA4-2 Publicou atraso em 10/11. A versão d
 
 AVA5-1 Aplicou o polimorfismo, porém não foi efetivo porque as classes e métodos ficaram encapsulados dentro de Cadastro e Lista.
 
-AVA5-2 Boa decisão de aplicação da Interface na barra de botões.
+AVA5-2 Boa decisão de aplicação da Interface na barra de botões. Faltou aplica também na configuração.
