@@ -5,3 +5,7 @@ Criei uma versão para cada código que o senhor pediu, tínhamos feito essas ve
 Certo! Atenção nas próximas. Seguir as orientações para utilizar o histório de versionamento do GIT.
 
 AVA4-1 Publicou atrasado em 11/11 e AVA4-2 Publicou atraso em 10/11. A versão da AVA-4 não está compátivel com POO. Você criaram classe dependente dentre de um único POO.
+
+AVA5-1 Aplicou o polimorfismo, porém não foi efetivo porque as classes e métodos ficaram encapsulados dentro de Cadastro e Lista.
+
+AVA5-2 Boa decisão de aplicação da Interface na barra de botões.
